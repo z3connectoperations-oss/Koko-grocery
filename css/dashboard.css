@@ -197,4 +197,22 @@
   .dashboard-split {
     grid-template-columns: 1fr;
   }
+  
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    height: 200px;
+  }
+  
+  .panel-body {
+    padding: 12px;
+  }
+  
+  .panel-header {
+    padding: 12px;
+  }
 }

@@ -353,3 +353,49 @@
   font-size: 0.75rem;
   margin-top: 15px;
 }
+
+/* Responsive adjustments for POS */
+@media (max-width: 1024px) {
+  .pos-layout {
+    grid-template-columns: 1fr 320px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pos-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh auto; /* Stack them with equal-ish heights or let content push */
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    gap: 16px;
+  }
+  
+  .pos-main-panel {
+    overflow: hidden;
+  }
+  
+  .pos-sidebar-panel {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-left: 0;
+    padding-top: 16px;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .pos-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+  
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pos-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}
