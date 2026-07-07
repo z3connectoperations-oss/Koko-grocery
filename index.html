@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOKO GROUPS - Enterprise ERP</title>
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pos.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Full App Container -->
+  <div id="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+      <div class="brand-section">
+        <img src="assets/logo.png" alt="KOKO Brand Logo" style="width: 44px; height: 44px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(212,175,55,0.3));">
+        <div>
+          <div class="brand-name" style="color: var(--primary);">KOKO GROUPS</div>
+          <div class="brand-subtitle">Enterprise ERP</div>
+        </div>
+      </div>
+      
+      <ul class="sidebar-menu">
+        <li>
+          <a class="menu-item active" data-view="dashboard">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z" />
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="inventory">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+            Inventory Management
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="pos">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+            POS Billing Screen
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="purchase">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            Purchase & Suppliers
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="logistics">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            Koko Imports & Landed Cost
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="pl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+            </svg>
+            Profit & Loss Ledger
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="reports">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Reports & Analytics
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="customers">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Customer Accounts
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="employees">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            Employee Attendance
+          </a>
+        </li>
+        <li>
+          <a class="menu-item" data-view="settings">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Store Settings
+          </a>
+        </li>
+      </ul>
+      
+      <div class="sidebar-footer">
+        <div>KOKO GROUPS v1.0.0</div>
+        <div>Local Persistence Active</div>
+      </div>
+    </aside>
+    
+    <!-- Header/Topbar Navigation -->
+    <header id="topbar">
+      <div class="topbar-left">
+        <button id="btn-hamburger" class="hamburger-btn" aria-label="Toggle Sidebar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 24px; height: 24px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <img src="assets/logo.png" alt="KOKO Logo" style="width: 36px; height: 36px; object-fit: contain; margin-right: 8px;">
+        <h2 class="breadcrumb-title" id="view-title">Dashboard</h2>
+      </div>
+      
+      <div class="topbar-right">
+        <!-- Active Channel Dropdown Tracker -->
+        <div class="user-selector-container">
+          <label style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">ACTIVE CHANNEL</label>
+          <select id="global-channel-select" class="user-select">
+            <option value="store1">Mumbai Retail (Store 1)</option>
+            <option value="store2">Delhi Retail (Store 2)</option>
+            <option value="store3">Bengaluru Retail (Store 3)</option>
+            <option value="online">WordPress (Online)</option>
+            <option value="restaurant">B2B Restaurant</option>
+            <option value="hotel">B2B Hotel</option>
+            <option value="bulk">B2B Bulk Purchase</option>
+          </select>
+        </div>
+
+        <!-- Clock Widget -->
+        <span class="system-time" id="clock-display">00:00:00 AM</span>
+        
+        <div class="topbar-actions">
+          <!-- Notification Bell -->
+          <button class="notification-bell" id="btn-notifications" title="System Alerts">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            <span class="notification-badge" id="alerts-count">0</span>
+          </button>
+          
+          <!-- Theme Switcher -->
+          <button class="theme-toggle" id="btn-theme-toggle" title="Toggle Theme">
+            <!-- Moon Icon (Default for dark mode) -->
+            <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 20px; height: 20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Country Switcher -->
+          <div class="user-selector-container">
+            <select id="global-country-select" class="user-select" title="Switch Country Context">
+              <option value="IN">India 🇮🇳</option>
+              <option value="JP">Japan 🇯🇵</option>
+            </select>
+          </div>
+
+          <!-- Staff Role Switcher -->
+          <div class="user-selector-container">
+            <select id="global-role-select" class="user-select">
+              <option value="admin">Administrator (Admin)</option>
+              <option value="manager">Store Manager</option>
+              <option value="cashier">POS Cashier</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Dynamic Content Area -->
+    <main id="main-viewport">
+      <!-- Views are loaded dynamically via Javascript -->
+    </main>
+
+  </div>
+
+  <!-- MODAL DIALOGS WRAPPER -->
+  
+  <!-- Add/Edit Product Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-container glass-panel-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="product-modal-title">Add New Product SKU</h3>
+        <button class="modal-close" onclick="closeModal('product-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="product-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-sku">SKU Code (Unique) *</label>
+              <input type="text" id="p-sku" class="form-control" required placeholder="e.g. RICE-001">
+            </div>
+            <div class="form-group">
+              <label for="p-barcode">Barcode *</label>
+              <input type="text" id="p-barcode" class="form-control" required placeholder="Scan or enter code">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-name">Product Name *</label>
+              <input type="text" id="p-name" class="form-control" required placeholder="e.g. Premium Basmati Rice 10kg">
+            </div>
+            <div class="form-group">
+              <label for="p-category">Category *</label>
+              <select id="p-category">
+                <option value="Rice & Grain">Rice & Grain</option>
+                <option value="Spices & Condiments">Spices & Condiments</option>
+                <option value="Processed Food">Processed Food</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Household">Household</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-batch">Batch Number</label>
+              <input type="text" id="p-batch" class="form-control" placeholder="e.g. BT-2026-07">
+            </div>
+            <div class="form-group">
+              <label for="p-expiry">Expiry Date</label>
+              <input type="date" id="p-expiry" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="p-tax">India GST Rate *</label>
+              <select id="p-tax">
+                <option value="5">5% (Reduced food/bev)</option>
+                <option value="18">18% (Standard GST)</option>
+              </select>
+            </div>
+          </div>
+
+          <hr style="border-color: var(--border-color); margin: 16px 0;">
+          <h4 style="margin-bottom: 12px; font-family: var(--font-title);">Multi-Channel Pricing (₹ INR)</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-price-store1">Mumbai Retail (Store 1)</label>
+              <input type="number" id="p-price-store1" class="form-control" min="0" required placeholder="₹">
+            </div>
+            <div class="form-group">
+              <label for="p-price-store2">Delhi Retail (Store 2)</label>
+              <input type="number" id="p-price-store2" class="form-control" min="0" required placeholder="₹">
+            </div>
+            <div class="form-group">
+              <label for="p-price-store3">Bengaluru Retail (Store 3)</label>
+              <input type="number" id="p-price-store3" class="form-control" min="0" required placeholder="₹">
+            </div>
+            <div class="form-group">
+              <label for="p-price-online">WordPress (Online)</label>
+              <input type="number" id="p-price-online" class="form-control" min="0" required placeholder="₹">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-price-restaurant">B2B Restaurant</label>
+              <input type="number" id="p-price-restaurant" class="form-control" min="0" required placeholder="₹">
+            </div>
+            <div class="form-group">
+              <label for="p-price-hotel">B2B Hotel</label>
+              <input type="number" id="p-price-hotel" class="form-control" min="0" required placeholder="₹">
+            </div>
+            <div class="form-group">
+              <label for="p-price-bulk">B2B Bulk Purchase</label>
+              <input type="number" id="p-price-bulk" class="form-control" min="0" required placeholder="₹">
+            </div>
+            <div class="form-group">
+              <label for="p-price-import">KOKO Import Cost</label>
+              <input type="number" id="p-price-import" class="form-control" min="0" required placeholder="₹">
+            </div>
+          </div>
+
+          <hr style="border-color: var(--border-color); margin: 16px 0;">
+          <h4 style="margin-bottom: 12px; font-family: var(--font-title);">Multi-Store Inventory Levels</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-stock-wh">Main Warehouse</label>
+              <input type="number" id="p-stock-wh" class="form-control" min="0" required placeholder="Qty">
+            </div>
+            <div class="form-group">
+              <label for="p-stock-store1">Store 1 Mumbai</label>
+              <input type="number" id="p-stock-store1" class="form-control" min="0" required placeholder="Qty">
+            </div>
+            <div class="form-group">
+              <label for="p-stock-store2">Store 2 Delhi</label>
+              <input type="number" id="p-stock-store2" class="form-control" min="0" required placeholder="Qty">
+            </div>
+            <div class="form-group">
+              <label for="p-stock-store3">Store 3 Bengaluru</label>
+              <input type="number" id="p-stock-store3" class="form-control" min="0" required placeholder="Qty">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="max-width: 50%;">
+              <label for="p-reorder">Low Stock Alert Threshold</label>
+              <input type="number" id="p-reorder" class="form-control" min="0" required placeholder="Qty threshold">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('product-modal')">Cancel</button>
+        <button class="btn btn-primary" id="btn-save-product">Save Product</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Purchase Order / GRN Modal -->
+  <div class="modal-overlay" id="po-modal">
+    <div class="modal-container glass-panel-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="po-modal-title">New Purchase Order</h3>
+        <button class="modal-close" onclick="closeModal('po-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="po-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="po-supplier">Supplier</label>
+              <select id="po-supplier"></select>
+            </div>
+            <div class="form-group">
+              <label for="po-id">PO Code</label>
+              <input type="text" id="po-id" class="form-control" readonly>
+            </div>
+          </div>
+          <hr style="border-color: var(--border-color); margin: 12px 0;">
+          <h4 style="margin-bottom: 8px;">Order Line Items</h4>
+          
+          <div id="po-lines-container" style="display: flex; flex-direction: column; gap: 8px;">
+            <!-- Render line items dynamically -->
+          </div>
+          
+          <button type="button" class="btn btn-secondary btn-sm" id="btn-add-po-line" style="margin-top: 8px;">
+            + Add Product Line
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('po-modal')">Close</button>
+        <button class="btn btn-success" id="btn-receive-po" style="display:none;">Mark Goods Received (GRN)</button>
+        <button class="btn btn-primary" id="btn-save-po">Create Purchase Order</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Landed Cost / Koko Import Shipment Modal -->
+  <div class="modal-overlay" id="shipment-modal">
+    <div class="modal-container glass-panel-lg" style="max-width: 750px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="shipment-modal-title">Logistics & Landed Cost Spreadsheet</h3>
+        <button class="modal-close" onclick="closeModal('shipment-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="shipment-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sh-id">Shipment ID</label>
+              <input type="text" id="sh-id" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="sh-name">Shipment Name</label>
+              <input type="text" id="sh-name" class="form-control" required placeholder="e.g. Shipment 1: Rice">
+            </div>
+            <div class="form-group">
+              <label for="sh-origin">Origin Country</label>
+              <input type="text" id="sh-origin" class="form-control" required placeholder="e.g. India">
+            </div>
+          </div>
+
+          <hr style="border-color: var(--border-color); margin: 12px 0;">
+          <h4 style="margin-bottom: 8px;">Landed Cost Breakdown (₹ INR Total Expenses)</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sh-clearance">India Customs Clearance</label>
+              <input type="number" id="sh-clearance" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="form-group">
+              <label for="sh-logistics">Logistic / Ocean Freight</label>
+              <input type="number" id="sh-logistics" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="form-group">
+              <label for="sh-packaging">Local Packaging / Processing</label>
+              <input type="number" id="sh-packaging" class="form-control" min="0" value="0" required>
+            </div>
+          </div>
+
+          <hr style="border-color: var(--border-color); margin: 12px 0;">
+          <h4 style="margin-bottom: 8px;">Shipment Contents</h4>
+          <div class="form-row" style="grid-template-columns: 2fr 1fr 1fr; align-items: flex-end; font-weight:600; font-size:0.8rem; color:var(--text-secondary); margin-bottom: 4px;">
+            <div>SKU Name</div>
+            <div>Quantity (Bags/Units)</div>
+            <div>Base Product Cost (₹ per Unit)</div>
+          </div>
+          <div class="form-row" style="grid-template-columns: 2fr 1fr 1fr; align-items: center; margin-bottom: 12px;">
+            <div>
+              <select id="sh-sku-select"></select>
+            </div>
+            <div>
+              <input type="number" id="sh-qty" class="form-control" min="1" required placeholder="Qty">
+            </div>
+            <div>
+              <input type="number" id="sh-unitcost" class="form-control" min="1" required placeholder="₹ per unit">
+            </div>
+          </div>
+
+          <div style="background-color: var(--bg-tertiary); padding: 16px; border-radius: var(--border-radius-md); margin-top: 16px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:0.9rem;">
+              <span>Base Subtotal:</span>
+              <span id="sh-calc-subtotal" style="font-family:var(--font-mono); font-weight:700;">₹0</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:0.9rem;">
+              <span>Logistics + Customs + Package Fee:</span>
+              <span id="sh-calc-overhead" style="font-family:var(--font-mono); font-weight:700;">₹0</span>
+            </div>
+            <hr style="border-color: var(--border-color); margin: 8px 0;">
+            <div style="display:flex; justify-content:space-between; font-size:1.1rem; font-weight:800;">
+              <span>Total Landed Cost:</span>
+              <span id="sh-calc-landedtotal" style="color:var(--primary); font-family:var(--font-mono);">₹0</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:1rem; font-weight:700; color:var(--success);">
+              <span>Landed Cost per Unit (₹):</span>
+              <span id="sh-calc-landedunit" style="font-family:var(--font-mono);">₹0</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('shipment-modal')">Close</button>
+        <button class="btn btn-primary" id="btn-save-shipment">Create and Receive Shipment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Credit Account / Customer Adjustments Modal -->
+  <div class="modal-overlay" id="credit-modal">
+    <div class="modal-container glass-panel-lg">
+      <div class="modal-header">
+        <h3 class="modal-title">Adjust Customer Credit</h3>
+        <button class="modal-close" onclick="closeModal('credit-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="credit-form">
+          <input type="hidden" id="cr-cust-id">
+          <div class="form-group">
+            <label>Customer Name</label>
+            <input type="text" id="cr-cust-name" class="form-control" readonly>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Outstanding Balance (₹)</label>
+              <input type="text" id="cr-cust-balance" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label for="cr-cust-limit">Credit Limit (₹)</label>
+              <input type="number" id="cr-cust-limit" class="form-control" min="0" required>
+            </div>
+          </div>
+          <hr style="border-color: var(--border-color); margin: 12px 0;">
+          <h4 style="margin-bottom: 8px;">Record Credit Payment / Refund</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cr-adjust-amount">Adjustment Amount (₹)</label>
+              <input type="number" id="cr-adjust-amount" class="form-control" placeholder="Positive to pay off, negative to charge">
+            </div>
+            <div class="form-group">
+              <label for="cr-adjust-desc">Adjustment Note</label>
+              <input type="text" id="cr-adjust-desc" class="form-control" placeholder="e.g. Bank Transfer payment">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('credit-modal')">Cancel</button>
+        <button class="btn btn-primary" id="btn-save-credit">Record Adjustment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POS Receipt & Virtual Invoice Terminal -->
+  <div class="modal-overlay" id="receipt-modal">
+    <div class="modal-container glass-panel-lg" style="max-width: 400px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Receipt Invoice</h3>
+        <button class="modal-close" onclick="closeModal('receipt-modal')">&times;</button>
+      </div>
+      <div class="modal-body" style="background-color: var(--bg-tertiary); padding: 12px;">
+        <div id="receipt-content-area">
+          <!-- virtual coupon/receipt output -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('receipt-modal')">Close</button>
+        <button class="btn btn-primary" id="btn-print-receipt">Print Receipt</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Square Mock Checkout Screen -->
+  <div class="modal-overlay" id="square-modal">
+    <div class="modal-container glass-panel" style="max-width: 380px; text-align: center;">
+      <div class="modal-header">
+        <h3 class="modal-title">Square Terminal Payment</h3>
+        <button class="modal-close" onclick="closeModal('square-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background-color: #111; color: #fff; padding: 24px; border-radius: var(--border-radius-md); box-shadow: inset 0 0 10px rgba(0,0,0,0.8); font-family:var(--font-mono); margin-bottom: 20px;">
+          <div style="font-size:0.8rem; color:#aaa; margin-bottom: 6px;">SQUARE MOCK TERMINAL</div>
+          <div id="square-screen-amount" style="font-size:1.6rem; font-weight:800; color:#58a6ff; margin-bottom: 16px;">₹0</div>
+          <div id="square-screen-status" style="font-size:0.9rem; color:#34d399; animation: blink 1.5s infinite;">INSERT / SWIPE / TAP CARD</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <button class="btn btn-success" id="btn-square-simulate-tap">Simulate Tap (Success)</button>
+          <button class="btn btn-danger" id="btn-square-simulate-decline">Simulate Decline / Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Screen Overlay -->
+  <div id="login-screen" class="login-overlay active">
+    <div class="login-container glass-panel-lg animate-fade-in" style="border: 1px solid rgba(212,175,55,0.25);">
+      <img src="assets/logo.png" alt="KOKO Stamp Logo" class="login-logo" style="width:120px; height:120px; filter: drop-shadow(0 0 10px rgba(212,175,55,0.4));">
+      <h2 style="margin-top: 10px; margin-bottom: 6px; font-family: var(--font-title); font-size: 1.8rem; color: var(--primary);">KOKO GROUPS</h2>
+      <p style="color: var(--text-muted); font-size: 0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom: 24px;">Enterprise Resource Planning</p>
+      
+      <div class="form-group" style="text-align: left; width: 100%;">
+        <label for="login-username">Operator Username</label>
+        <input type="text" id="login-username" class="form-control" value="admin@kokogroups.com" readonly style="border-color: rgba(212,175,55,0.2);">
+      </div>
+      <div class="form-group" style="text-align: left; width: 100%; margin-top: 12px; margin-bottom: 24px;">
+        <label for="login-password">Access Token / Password</label>
+        <input type="password" id="login-password" class="form-control" value="••••••••" readonly style="border-color: rgba(212,175,55,0.2);">
+      </div>
+      
+      <button class="btn btn-primary" id="btn-login" style="width: 100%; padding: 12px; font-weight: 700; box-shadow: var(--shadow-glow); background: linear-gradient(135deg, var(--primary), var(--primary-hover)); border: none; color: #111;">
+        SECURE LOGIN
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Application JS Modules -->
+  <script src="js/dal.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/chart.js"></script>
+  
+  <!-- Views Controllers -->
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/inventory.js"></script>
+  <script src="js/views/purchase.js"></script>
+  <script src="js/views/pos.js"></script>
+  <script src="js/views/logistics.js"></script>
+  <script src="js/views/pl.js"></script>
+  <script src="js/views/reports.js"></script>
+  <script src="js/views/customers.js"></script>
+  <script src="js/views/employees.js"></script>
+  <script src="js/views/settings.js"></script>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

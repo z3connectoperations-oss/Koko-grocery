@@ -1,0 +1,15 @@
+{
+  "name": "koko-grocery-erp",
+  "version": "1.0.0",
+  "description": "Enterprise ERP, Inventory, Logistics and POS billing prototype for KOKO Grocery.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node copy-logo.js && vite",
+    "de": "node copy-logo.js && vite",
+    "build": "node copy-logo.js && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
